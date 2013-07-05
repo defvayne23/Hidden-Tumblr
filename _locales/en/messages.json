@@ -1,0 +1,100 @@
+{
+	"title": {
+		"message": "Hidden Tumblr"
+	},
+
+
+
+	"hide_post": {
+		"message": "Hide Post",
+		"description": "Text to display for the link that hides a post."
+	},
+
+
+
+	"title_settings": {
+		"message": "Settings"
+	},
+	"title_export": {
+		"message": "Export"
+	},
+	"title_import": {
+		"message": "Import"
+	},
+
+
+
+	"settings_label_format": {
+		"message": "Post Hiding Format"
+	},
+
+
+	"settings_pass": {
+		"message": "Settings have been saved.",
+		"description": "Shown when the settings successfully saved."
+	},
+	"settings_fail": {
+		"message": "Failed to save settings.",
+		"description": "Shown when the settings failed to save."
+	},
+
+
+
+	"settings_format_opaque": {
+		"message": "Opaque"
+	},
+	"settings_format_minimize": {
+		"message": "Minimize"
+	},
+	"settings_format_remove": {
+		"message": "Remove"
+	},
+
+
+
+	"export_desc": {
+		"message": "Save below data to a text file. Format is JSON. Each number represents an original post ID.",
+		"description": "Details for exporting."
+	},
+
+
+
+	"import_desc": {
+		"message": "Expted data format is JSON. Post IDs should be integers within a singal dimension array. If having issues, compare to export data or <a href=\"http://jsonformatter.curiousconcept.com/\" target=\"_blank\">validated data</a>.",
+		"description": "Details for importing."
+	},
+	"import_pass": {
+		"message": "Data has been imported.<br>($added$ IDs added) ($skipped$ IDs skipped)",
+		"description": "Shown when the user tries to import data from the options page. If no problems, this is shown.",
+		"placeholders": {
+			"added": {
+				"content": "$1",
+				"example": "0"
+			},
+			"skipped": {
+				"content": "$2",
+				"example": "0"
+			}
+		}
+	},
+	"import_fail": {
+		"message": "Unable to import data.",
+		"description": "Shown when the user tries to import data from the options page. If there are problems, this is shown."
+	},
+
+
+
+	"disclaimer": {
+		"message": "This extension has in no way affiliation with Tumblr.<br>Copyrights are retained by their owners.",
+		"description": "Don't sue me!"
+	},
+
+	
+
+	"footer_gihub": {
+		"message": "View on GitHub"
+	},
+	"footer_issue": {
+		"message": "Submit Issue/Suggestion"
+	}
+}

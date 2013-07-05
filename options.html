@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title class="locale" data-message="title"></title>
+
+	<link rel="author" href="humans.txt">
+
+	<link rel="stylesheet" href="css/normalize.css?v=1">
+	<link rel="stylesheet" href="css/options.css?v=1">
+</head>
+<body>
+	<header role="banner">
+		<hgroup>
+			<h1 class="locale" data-message="title"></h1>
+		</hgroup>
+
+		<nav role="navigation">
+			<ul>
+				<li><a href="#settings" class="locale" data-message="title_settings"></a></li>
+				<li><a href="#export" class="locale" data-message="title_export"></a></li>
+				<li><a href="#import" class="locale" data-message="title_import"></a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="main" role="main">
+		<div id="settings" class="content">
+			<h2 class="locale" data-message="title_settings"></h2>
+			<form>
+				<div class="message"></div>
+				<label><span class="locale" data-message="settings_label_format"></span>:</label>
+				<select name="format" class="setting">
+					<option value="opaque" class="locale" data-message="settings_format_opaque"></option>
+					<option value="minimize" class="locale" data-message="settings_format_minimize"></option>
+					<option value="remove" class="locale" data-message="settings_format_remove"></option>
+				</select>
+				<input type="submit" value="Save" class="save">
+			</form>
+		</div>
+		<div id="export" class="content">
+			<h2 class="locale" data-message="title_export"></h2>
+			<p class="locale" data-message="title_import"></p>
+			<textarea name="export"> </textarea>
+		</div>
+		<div id="import" class="content">
+			<h2 class="locale" data-message="title_import"></h2>
+			<p class="locale" data-message="import_desc"></p>
+			<form>
+				<div class="message"></div>
+				<textarea name="import"> </textarea>
+				<input type="submit" value="Import Data" class="save">
+			</form>
+		</div>
+	</div> <!-- #main -->
+	
+	<footer role="contentinfo">
+		<div class="disclaimer locale" data-message="disclaimer"></div>
+		<nav>
+			<ul>
+				<li><a href="http://github.com/defvayne23" class="locale" data-message="footer_gihub"></a></li>
+				<li><a href="http://github.com/defvayne23" class="locale" data-message="footer_issue"></a></li>
+			</ul>
+		</nav>
+	</footer>
+
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script src="js/options.js"></script>
+</body>
+</html>

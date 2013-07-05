@@ -1,4 +1,4 @@
-HIdden Tumblr
+Hidden Tumblr
 ===========
 
 Hidden Tumblr is a Google Chrome extension that hides a post, all of it's futer and past reblogs. Useful for when you are tired of seeing a specific post show up on your dashboard over and over again.

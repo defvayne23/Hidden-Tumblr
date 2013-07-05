@@ -1,6 +1,6 @@
 {
 	"name": "My extension",
-	"version": "2.0",
+	"version": "1.0",
 	"description":"Adds ability to hide Tumblr posts, even if they are reblogged.",
 	"default_locale": "en",
 	"icons": {

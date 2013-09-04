@@ -1,0 +1,3 @@
+var options = {
+	format: "opaque"
+};

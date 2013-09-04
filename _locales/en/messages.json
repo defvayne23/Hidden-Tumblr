@@ -9,6 +9,19 @@
 		"message": "Hide Post",
 		"description": "Text to display for the link that hides a post."
 	},
+	"unhide_post": {
+		"message": "Unhide Post",
+		"description": "Text to display for the link that hides a post."
+	},
+
+
+
+	"show_content": {
+		"message": "Show Content"
+	},
+	"hide_content": {
+		"message": "Hide Content"
+	},
 
 
 
@@ -60,7 +73,7 @@
 
 
 	"import_desc": {
-		"message": "Expted data format is JSON. Post IDs should be integers within a singal dimension array. If having issues, compare to export data or <a href=\"http://jsonformatter.curiousconcept.com/\" target=\"_blank\">validated data</a>.",
+		"message": "Expected data format is JSON. Post IDs should be integers within a singal dimension array. If having issues, compare to export data or <a href=\"http://jsonformatter.curiousconcept.com/\" target=\"_blank\">validated data</a>.",
 		"description": "Details for importing."
 	},
 	"import_pass": {

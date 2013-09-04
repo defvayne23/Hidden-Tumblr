@@ -13,7 +13,14 @@ function setupNav() {
 
 function setupSettings() {
 	$('#settings form .setting').each(function() {
-		$(this).val(localStorage["settings_" + $(this).attr('name')]);
+		console.log("settings_" + $(this).attr('name') in localStorage);
+		if("settings_" + $(this).attr('name') in localStorage) {
+			value = localStorage["settings_" + $(this).attr('name')]
+		} else {
+			value = options[$(this).attr('name')];
+		}
+
+		$(this).val(value);
 	});
 
 	$('#settings form').on('submit', function() {

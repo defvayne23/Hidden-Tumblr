@@ -37,6 +37,9 @@
 
 
 
+	"settings_label_top_post": {
+		"message": "Show Last Viewed Top Post"
+	},
 	"settings_label_format": {
 		"message": "Post Hiding Format"
 	},

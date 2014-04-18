@@ -1,3 +1,4 @@
 var options = {
-	format: "opaque"
+	format: "opaque",
+	show_top_post: true
 };

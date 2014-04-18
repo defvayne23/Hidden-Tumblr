@@ -8,7 +8,8 @@ function hide_post_opaque(ele) {
 	link.on('click', link_click)
 	ele.append(link);
 
-	ele.height( 34 );
+	// ele.height( 34 );
+	ele.css('padding', '23px');
 }
 
 function unhide_post_opaque(ele) {

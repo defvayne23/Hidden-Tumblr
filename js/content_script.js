@@ -1,6 +1,20 @@
-function check_posts() {
-	$('#posts .post:not(.hidden-tumblr-traversed)').not('.new_post_buttons').each(function() {
+function check_posts(set_top_post) {
+	if(set_top_post == true) {
+		new_top_post = $('#posts .post:not(.new_post_buttons)').eq(0);
+		chrome.extension.sendRequest({method: "set", key: "last_top_post", value: new_top_post.data('post-id')});
+	}
+
+	$('#posts .post:not(.hidden-tumblr-traversed):not(.new_post_buttons)').each(function() {
 		add_hide_link( $(this) );
+
+		if( $(this).data('post-id') == last_top_post && show_last_top_post == true) {
+			identifier = $('<li><div class="hidden-tumblr-top-post">You\'ve already seen everything below here. <a href="#" class="hidden-tumblr-to-top">Go Back to the Top</a></div></li>');
+			$(this).parent().before(identifier);
+			identifier.find('.hidden-tumblr-to-top').on('click', function() {
+				window.scrollTo(0, 0);
+				return false;
+			});
+		}
 		
 		if( $.inArray( $(this).data('root-id'), hidden_posts ) > -1 ) {
 			hide_post( $(this) );
@@ -70,6 +84,22 @@ chrome.extension.sendRequest({method: "get", key: "settings_format"}, function(r
 	}
 });
 
+chrome.extension.sendRequest({method: "get", key: "settings_show_top_post"}, function(response) {
+	if(response.data != undefined && response.data != "") {
+		show_last_top_post = $.parseJSON(JSON.parse(response.data));
+	} else {
+		show_last_top_post = $.parseJSON(options["show_top_post"]);
+	}
+});
+
+chrome.extension.sendRequest({method: "get", key: "last_top_post"}, function(response) {
+	if(response.data != undefined && response.data != "") {
+		last_top_post = JSON.parse(response.data);
+	} else {
+		last_top_post = null;
+	}
+});
+
 chrome.extension.sendRequest({method: "get", key: "hidden_posts"}, function(response) {
 	if(response.data != undefined && response.data != "") {
 		hidden_posts = JSON.parse(response.data);
@@ -77,7 +107,7 @@ chrome.extension.sendRequest({method: "get", key: "hidden_posts"}, function(resp
 		hidden_posts = [];
 	}
 
-	check_posts();
+	check_posts(true);
 });
 
-setInterval("check_posts();", 500);
+setInterval("check_posts(false);", 500);

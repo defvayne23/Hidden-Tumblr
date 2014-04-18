@@ -81,6 +81,12 @@ footer .disclaimer {
 	display: none;
 }
 
+#settings {
+	label {
+		margin-bottom: 20px;
+	}
+}
+
 #export textarea,
 #import textarea {
 	width: 810px;
@@ -94,16 +100,14 @@ footer .disclaimer {
 	padding: 10px 15px;
 	margin-bottom: 20px;
 	border-radius: 10px;
-}
-
-.message.pass {
-	background: linear-gradient(to bottom, #cdeb8e 0%,#a5c956 100%);
-	border-color: #009135;
-}
-
-.message.fail {
-	background: linear-gradient(to bottom, #febbbb 0%,#fe9090 45%,#ff5c5c 100%);
-	border-color: #FF4545;
+	&.pass {
+		background: linear-gradient(to bottom, #cdeb8e 0%,#a5c956 100%);
+		border-color: #009135;
+	}
+	&.fail {
+		background: linear-gradient(to bottom, #febbbb 0%,#fe9090 45%,#ff5c5c 100%);
+		border-color: #FF4545;
+	}
 }
 
 label {

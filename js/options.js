@@ -13,19 +13,26 @@ function setupNav() {
 
 function setupSettings() {
 	$('#settings form .setting').each(function() {
-		console.log("settings_" + $(this).attr('name') in localStorage);
 		if("settings_" + $(this).attr('name') in localStorage) {
 			value = localStorage["settings_" + $(this).attr('name')]
 		} else {
 			value = options[$(this).attr('name')];
 		}
 
-		$(this).val(value);
+		if($(this).attr('type') == "checkbox") {
+			$(this).prop('checked', $.parseJSON(value));
+		} else {
+			$(this).val(value);
+		}
 	});
 
 	$('#settings form').on('submit', function() {
 		$(this).find('.setting').each(function() {
-			localStorage["settings_" + $(this).attr('name')] = $(this).val();
+			if($(this).attr('type') == "checkbox") {
+				localStorage["settings_" + $(this).attr('name')] = $(this).prop('checked');
+			} else {
+				localStorage["settings_" + $(this).attr('name')] = $(this).val();
+			}
 		});
 
 		$(this).find('.message').stop().removeClass('fail').addClass('pass').text( chrome.i18n.getMessage( 'settings_pass' ) ).fadeIn().delay(10000).fadeOut();

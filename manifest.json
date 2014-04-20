@@ -15,7 +15,7 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["http://www.tumblr.com/dashboard"],
+			"matches": ["*://www.tumblr.com/dashboard"],
 			"css": ["css/content_script.css"],
 			"js": ["js/defaults.js", "js/jquery-2.0.3.min.js", "js/content_script.js", "js/hide_formats.js"]
 		}

@@ -11,7 +11,7 @@
 	},
 	"unhide_post": {
 		"message": "Unhide Post",
-		"description": "Text to display for the link that hides a post."
+		"description": "Text to display for the link that unhides a post."
 	},
 
 
@@ -76,12 +76,12 @@
 
 
 	"import_desc": {
-		"message": "Expected data format is JSON. Post IDs should be integers within a singal dimension array. If having issues, compare to export data or <a href=\"http://jsonformatter.curiousconcept.com/\" target=\"_blank\">validated data</a>.",
+		"message": "Expected data format is JSON. Post IDs should be integers within a single dimensional array. If having issues, compare to export data and <a href=\"http://jsonformatter.curiousconcept.com/\" target=\"_blank\">validate your JSON</a>.",
 		"description": "Details for importing."
 	},
 	"import_pass": {
 		"message": "Data has been imported.<br>($added$ IDs added) ($skipped$ IDs skipped)",
-		"description": "Shown when the user tries to import data from the options page. If no problems, this is shown.",
+		"description": "Shown when the user tries to import data from the options page and the import is successful.",
 		"placeholders": {
 			"added": {
 				"content": "$1",
@@ -95,13 +95,13 @@
 	},
 	"import_fail": {
 		"message": "Unable to import data.",
-		"description": "Shown when the user tries to import data from the options page. If there are problems, this is shown."
+		"description": "Shown when the user tries to import data from the options page and the import fails."
 	},
 
 
 
 	"disclaimer": {
-		"message": "This extension has in no way affiliation with Tumblr.<br>Copyrights are retained by their owners.",
+		"message": "This extension is in no way affiliated with Tumblr.<br>Copyrights are retained by their respected owners.",
 		"description": "Don't sue me!"
 	},
 

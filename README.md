@@ -1,4 +1,4 @@
-Hidden Tumblr
+Hidden Tumblr [![GitHub version](https://badge.fury.io/gh/defvayne23%2FHidden-Tumblr.svg)](http://badge.fury.io/gh/defvayne23%2FHidden-Tumblr)
 ===========
 
 Google Chrome extension to extend Tumblr.
